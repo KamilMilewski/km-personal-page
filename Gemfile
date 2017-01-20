@@ -18,6 +18,8 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+#For those pretty twitter, githum, etc little icons
+gem 'font-awesome-sass', '~> 4.6.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri

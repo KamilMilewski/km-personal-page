@@ -32,24 +32,18 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "projects";
+ @import "blueimp_gallery";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 
- .nav a{
-    font-size: 1.5em;
- }
- .navbar-brand{
-    font-size: 2em;
- }
-
-
-
- .img-circle {
-     border-radius: 50%;
- }
-
-
+ a { &:hover { text-decoration: none } }
+ .nav a{ font-size: 1.5em; }
+ .navbar-brand{ font-size: 2em; }
+ .img-circle{ border-radius: 50%; }
  footer {
-   margin-top: 40px;
+   margin-top: 50px;
    margin-bottom: 30px;
    text-align: center;
    color: #919191;

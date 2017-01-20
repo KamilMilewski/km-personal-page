@@ -1,0 +1,49 @@
+<%= provide :title, 'MachPlot' %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+      <h1 class="project-header">MachPlot</h1>
+      <br>
+
+      <p class="project-paragraph">
+        <strong>MachPlot</strong> has been written as a part master degree thesis: <em>"Steady states in electrical machines - creation of educational application"</em>.
+        The subject of the study was to create a program for the presentation of static characteristics of electrical machines.
+      </p>
+
+      <p class="project-paragraph">
+        As part of the work two sets of classes were created.
+        <ul>
+          <li><strong>MachChart</strong> library used to visualize line graph which is a general purpose tool.</li>
+          <li><strong>AsynchronousMotor</strong> to calculate the characteristics of the asynchronous machine in steady state.</li>
+        </ul>
+      </p>
+
+      <p class="project-paragraph">
+        On the basis of the two aforementioned class libraries <strong>MachPlot</strong> program was created.
+        MachPlot is an application that serves as a teaching aid to study issues related to electrical machines in steady state.
+        The program arose from the needs of a tool that possible simply,
+        quickly and clearly will be able show at the lecture the impact of changes in the parameters of the mathematical model for the evolution of characteristics.
+        The program is designed both for teachers as a teaching aid and a tool for creating new and for students as a self-study.
+      </p>
+
+      <p class="project-paragraph">
+        One of the main principles underpinning the creation of the program MachPlot was as large as possible susceptibility to modification and upgrades.
+        Because of that MachPlot was designed to be consisted of independent application-modules.
+      </p>
+
+
+      <br>
+      <p class="project-paragraph">
+        You can see <strong>MachPlot</strong> source code on
+        <%= link_to 'https://github.com/KamilMilewski/MachPlot', target: '_blank' do %>
+          GitHub <i class="fa fa-github" aria-hidden="true"></i>
+        <% end %>
+      </p>
+      <br>
+
+      <h4 class="blueimp-header">Selected MachPlot screens:</h4>
+      <%= render 'shared/blueimp_gallery', img_dir: 'IT/MachPlot' %>
+
+  </div>
+</div>

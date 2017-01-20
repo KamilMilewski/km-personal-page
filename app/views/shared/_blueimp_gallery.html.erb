@@ -1,0 +1,34 @@
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<div id="links">
+  <% source_path = Rails.root.join('app', 'assets', 'images', 'IT', 'MachPlot') %>
+  <% Dir.glob("#{source_path}/*.png").each do |file_path| %>
+    <% filename = File.basename file_path %>
+    <% title = (File.basename file_path, File.extname(file_path)).gsub('_', ' ') %>
+    <%= link_to image_path("IT/MachPlot/#{filename}"), html_options = { title: title } do %>
+      <%= image_tag "IT/MachPlot/#{filename}", alt: title, class: 'blueimp-thumbnail' %>
+    <% end %>
+  <% end %>
+</div>
+
+<!-- For blueimp gallery -->
+<script src="blueimp/js/blueimp-gallery.min.js"></script>
+<script>
+  document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+  };
+</script>
