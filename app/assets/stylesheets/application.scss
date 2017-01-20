@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* Bootstrap navbar customization */
+ $navbar-default-bg: transparent;
+ $navbar-default-link-color: black;
+ $navbar-default-link-active-color: black;
+ $navbar-default-link-hover-color: grey;
+ $navbar-default-link-hover-bg: transparent;
+ $navbar-padding-vertical: 30px;
+
+ /* Bootstrap jumbotron customization */
+ $jumbotron-bg: rgb(111, 84, 153);
+ $jumbotron-heading-color: white;
+ $jumbotron-color: rgb(205, 191, 227);
+ $jumbotron-font-size: 1.5em;
+ $jumbotron-heading-font-size: 2.5em;
+
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+ .nav a{
+    font-size: 1.5em;
+ }
+ .navbar-brand{
+    font-size: 2em;
+ }
+
+
+
+ .img-circle {
+     border-radius: 50%;
+ }
+
+
+ footer {
+   margin-top: 40px;
+   margin-bottom: 30px;
+   text-align: center;
+   color: #919191;
+}
