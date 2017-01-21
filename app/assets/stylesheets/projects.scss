@@ -3,6 +3,6 @@
 }
 
 .project { @extend .col-lg-8, .col-md-8, .col-sm-12, .col-xs-12;
-  h1 { text-align: center; margin-bottom: 50px; }
+  h1, h2, h3, h4, h5 { text-align: center; margin-bottom: 50px; }
   p { margin-top: 50px; }
 }
