@@ -1,4 +1,8 @@
-.project { @extend .col-lg-12, .col-md-12, .col-sm-12, .col-xs-12;
+.project-margin-column {
+  @extend .col-lg-2, .col-md-2, .hidden-sm, .hidden-xs;
+}
+
+.project { @extend .col-lg-8, .col-md-8, .col-sm-12, .col-xs-12;
   h1 { text-align: center; margin-bottom: 50px; }
   p { margin-top: 50px; }
 }

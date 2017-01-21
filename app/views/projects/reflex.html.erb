@@ -1,9 +1,24 @@
 <%= provide :title, 'Reflex' %>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="project-margin-column"></div>
+    <div class="project">
+      <h1>hydrofor controller visualization</h1>
 
+      <p>
+        The aim of this small project was to integrate Reflex hydrofor controllers with
+        <%= link_to 'Schneider StruxureWare Building Operation', 'http://www.schneider-electric.com/b2b/en/solutions/enterprise-solutions/solutions/enterprise-software-suites-building-operation/', target: '_blank' %>
+        software and create visualization for it.
+      </p>
 
+      <p>It features:</p>
+      <ul>
+        <li>Device accident/disruption BMS notifications for technical staff.</li>
+        <li>User can see detailed info about cause of the problem on dedicated visualization.</li>
+      </ul>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'CORAL/reflex', header: 'Selected screens:' %>
     </div>
+    <div class="project-margin-column"></div>
   </div>
 </div>

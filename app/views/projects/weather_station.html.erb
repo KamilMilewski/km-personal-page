@@ -1,9 +1,29 @@
 <%= provide :title, 'Weather Station' %>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="project-margin-column"></div>
+    <div class="project">
 
+      <h1>weather station</h1>
+
+      <p>
+        The purpose of this project was to create a visualization and integration
+        template for weather forecast that can be easily applied to any future,
+        StruxureWare based project. It features modern design and can be used with
+        most of the internet weather forecast APIs.
+      </p>
+
+      <p>
+        It involved integrating
+        <%= link_to 'Schneider StruxureWare Building Operation', 'http://www.schneider-electric.com/b2b/en/solutions/enterprise-solutions/solutions/enterprise-software-suites-building-operation/', target: '_blank' %> software
+        with one of the internet APIs.
+        (<%= link_to 'weather underground', 'https://www.wunderground.com/' %> in this case)
+        and creating visualization.
+      </p>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'CORAL/weather_station', header: 'Selected screens:' %>
 
     </div>
+    <div class="project-margin-column"></div>
   </div>
 </div>

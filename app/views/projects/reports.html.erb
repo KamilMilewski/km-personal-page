@@ -1,9 +1,66 @@
 <%= provide :title, 'Reports' %>
 <div class="container">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="project-margin-column"></div>
+    <div class="project">
+      <h1>Data acquisition report server</h1>
 
+      <p>
+        In modern enterprise level building objects there is a need to monitor status and collect data from up to hundreds of medium meters.
+        This includes electrical energy, water consumption, heat, etc.. This project solves problem of storing periodical medium usage data from
+        meters and presenting it in convenient form to the end user.
+      </p>
 
+      <p>It features:</p>
+      <ul>
+        <li>Tablear, circular, column and more report types.</li>
+        <li>User can filter data by various scopes (meter description, serial number, localization, etc.).</li>
+        <li>User can see meter usage for any period.</li>
+        <li>User can check health/online status for every meter.</li>
+        <li>User can export every report to pdf or xls files, so he can handle it to building tenant to show him his periodical medium usage.</li>
+      </ul>
+
+      <p>This type of projects involved on my part:
+        <ul>
+
+          <li>
+            Integrating <%= link_to 'Schneider StruxureWare Building Operation', 'http://www.schneider-electric.com/b2b/en/solutions/enterprise-solutions/solutions/enterprise-software-suites-building-operation/', target: '_blank' %>
+            with <%= link_to 'Microsoft reporting services (SSRS)', 'https://msdn.microsoft.com/en-us/library/ms157231.aspx', target: '_blank' %>.
+          </li>
+
+          <li>
+            Creating reports using <%= link_to 'Microsoft Report Builder', 'https://msdn.microsoft.com/en-us/library/dd220460.aspx', target: '_blank' %> software.
+          </li>
+
+          <li>
+            Creating set of custom T-SQL proocedures intended to extract periodical meter medium usage along with additional info like serial number or description.
+            Example can be found <%= link_to 'here', 'https://gist.github.com/KamilMilewski/159818632a5707471b76a3dac15edeb2', target: '_blank' %>.
+          </li>
+
+          <li>
+            Integrating <%= link_to 'M-Bus', 'http://www.m-bus.com/info/mbuse.php', target: '_blank' %>/<%= link_to 'Modbus', 'http://www.simplymodbus.ca/FAQ.htm#Modbus', target: '_blank' %>
+            gateway controllers with
+            <%= link_to 'Schneider StruxureWare Building Operation', 'http://www.schneider-electric.com/b2b/en/solutions/enterprise-solutions/solutions/enterprise-software-suites-building-operation/', target: '_blank' %>
+            software.
+          </li>
+
+        </ul>
+      </p>
+
+      <p>I implemented this system for:
+        <ul>
+
+          <li><%= link_to 'The International Conference Centre', 'http://www.mck.katowice.eu/en', target: '_blank' %> in Katowice.</li>
+
+          <li><%= link_to 'PRIME Corporate Center in Warsaw', 'http://primecorporatecenter.pl/en', target: '_blank' %> in Warsaw.</li>
+
+          <li><%= link_to 'Galeria Jurowiecka', 'http://galeriajurowiecka.com.pl/', target: '_blank' %> in Białystok.</li>
+
+        </ul>
+      </p>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'CORAL/reports', header: 'Selected screens:' %>
     </div>
+    <div class="project-margin-column"></div>
   </div>
 </div>
