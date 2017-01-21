@@ -14,17 +14,16 @@
 
  /* Bootstrap navbar customization */
  $navbar-default-bg: transparent;
- $navbar-default-link-color: black;
- $navbar-default-link-active-color: black;
- $navbar-default-link-hover-color: grey;
+ $navbar-default-link-color: rgba(0, 0, 0, 0.54);
+ $navbar-default-link-active-color: rgba(0, 0, 0, 0.54);
+ $navbar-default-link-hover-color: black;
  $navbar-default-link-hover-bg: transparent;
- $navbar-padding-vertical: 30px;
 
  /* Bootstrap jumbotron customization */
- $jumbotron-bg: rgb(111, 84, 153);
+ $jumbotron-bg: #28333b;
  $jumbotron-heading-color: white;
- $jumbotron-color: rgb(205, 191, 227);
- $jumbotron-font-size: 1.5em;
+ $jumbotron-color: white;
+ $jumbotron-font-size: 20px;
  $jumbotron-heading-font-size: 2.5em;
 
  @import "bootstrap-sprockets";
@@ -33,18 +32,57 @@
  @import "blueimp_gallery";
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ // Google fonts:
+ @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900');
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+ body {
+   font-family: 'Lato', sans-serif;
+   h1, h2, h3, h4, h5 { letter-spacing: 3px;}
+ }
 
  a { &:hover { text-decoration: none } }
- .nav a{ font-size: 1.5em; }
- .navbar-brand{ font-size: 2em; }
- .img-circle{ border-radius: 50%; }
+
+ .img-circle { border-radius: 50%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
  footer {
    margin-top: 50px;
    margin-bottom: 30px;
    text-align: center;
    color: #919191;
-}
+ }
+ .thumbnail {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ .jumbotron {
+   background-position: 100% 75%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   h1 {
+     letter-spacing: 7px;
+   }
+   p {
+     letter-spacing: 3px;
+     font-weight: 400;
+   }
+  }
+
+
+  .nav a { font-family: 'Roboto', sans-serif; font-size: 15px; font-weight: bold; }
+  .navbar-brand {
+    text-align: center;
+    #navbar-brand-name {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 1px;
+      border-bottom: 1px solid gray;
+    }
+    #navbar-brand-second-line {
+      font-size: 15px;
+      letter-spacing: 5px;
+    }
+  }
 /*
 *= require_self
 */
