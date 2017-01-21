@@ -1,6 +1,34 @@
 <%= provide :title, 'DALI' %>
 <div class="container">
+  <div class="row">
+    <div class="project">
+      <h1>Galeria Jurowiecka indoor light control</h1>
 
+      <p>
+        I took main part in commissioning, programming and created visualization
+        for Galeria Jurowiecka(Białystok) DALI indoor lighting control.
+        DALI stands for Digital Addressable Lighting Interface.
+      </p>
 
-  <%= render 'layouts/footer' %>
+      <p>
+        The main goal of
+        this project is to lower electrical energy consumption and relieve technical
+        staff from controlling indoor lighting.
+      </p>
+
+      <p>
+        It features:
+        <ul>
+          <li><strong>AUTO mode</strong> - program tries to keep constant light density based on
+              feedback from indoor sensors</li>
+          <li><strong>SCHEDULE</strong> - user can program each lighting zone to switch OFF or ON
+              (with given intensity) at given datetime.</li>
+          <li><strong>MANUAL mode</strong> - user can have direct control upon each lighting zone
+              (ON/OFF, 0-100% light intensity)</li>
+        </ul>
+      </p>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'CORAL/DALI', header: 'Selected screens:' %>
+    </div>
+  </div>
 </div>

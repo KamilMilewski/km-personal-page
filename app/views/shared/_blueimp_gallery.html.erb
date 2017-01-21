@@ -1,3 +1,4 @@
+<h4 class="blueimp-header"><%= header %></h4>
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <div class="slides"></div>
@@ -10,12 +11,12 @@
 </div>
 
 <div id="links">
-  <% source_path = Rails.root.join('app', 'assets', 'images', 'IT', 'MachPlot') %>
+  <% source_path = Rails.root.join('app', 'assets', 'images', img_dir) %>
   <% Dir.glob("#{source_path}/*.png").each do |file_path| %>
     <% filename = File.basename file_path %>
     <% title = (File.basename file_path, File.extname(file_path)).gsub('_', ' ') %>
-    <%= link_to image_path("IT/MachPlot/#{filename}"), html_options = { title: title } do %>
-      <%= image_tag "IT/MachPlot/#{filename}", alt: title, class: 'blueimp-thumbnail' %>
+    <%= link_to image_path("#{img_dir}/#{filename}"), html_options = { title: title } do %>
+      <%= image_tag "#{img_dir}/#{filename}", alt: title, class: 'blueimp-thumbnail' %>
     <% end %>
   <% end %>
 </div>

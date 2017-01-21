@@ -1,6 +1,51 @@
 <%= provide :title, 'KM-Forum' %>
 <div class="container">
+  <div class="row">
+    <div class="project">
 
+      <h1>KM-Forum</h1>
 
-  <%= render 'layouts/footer' %>
+      <p>
+        KMForum is a discussion board web application written in
+        <%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %>
+        and
+        <%= link_to 'Bootstrap', 'http://getbootstrap.com/', target: '_blank' %>.
+        It's simple and responsive to mobile devices.
+      </p>
+
+      <p>
+        It features:
+        <ul>
+          <li>Markdown formating for posts.</li>
+          <li>Code blocks with syntax highlighting.</li>
+          <li>Embedding pictures into posts.</li>
+          <li>Custom user avatars with Gravatar as a default.</li>
+          <li>Custom built authentication system.</li>
+          <li>Custom built authorization system.</li>
+          <li>Account activation via email.</li>
+          <li>Password reset via email.</li>
+          <li>Custom built voting system.</li>
+          <li>Responsivness to mobile devices.</li>
+          <li>Its code is higly covered by integration tests.</li>
+        </ul>
+      </p>
+
+      <p>
+        You can see <strong>KM-Forum</strong> source code on
+        <%= link_to 'https://github.com/KamilMilewski/km-forum', target: '_blank' do %>
+          GitHub <i class="fa fa-github" aria-hidden="true"></i>
+        <% end %>
+      </p>
+
+      <p>
+        Online sandbox can be found here
+        <%= link_to 'https://km-forum.herokuapp.com/', target: '_blank' do %>
+          here.
+        <% end %>
+      </p>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'IT/KM-Forum', header: 'Selected screens:' %>
+
+    </div>
+  </div>
 </div>
