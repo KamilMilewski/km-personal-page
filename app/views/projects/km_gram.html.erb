@@ -1,0 +1,48 @@
+<%= provide :title, 'KM-Forum' %>
+<div class="container">
+  <div class="row">
+    <div class="project-margin-column"></div>
+    <div class="project">
+
+      <h1>KmGram</h1>
+
+      <p>
+        KmGram is an Instagram clone written in
+        <%= link_to 'Ruby on Rails', 'http://rubyonrails.org/', target: '_blank' %>
+        and
+        <%= link_to 'Bootstrap', 'http://getbootstrap.com/', target: '_blank' %>.
+        It utilizes many popular gems like devise.
+      </p>
+
+      <p>
+        It features:
+        <ul>
+          <li>Commenting posts with Ajax</li>
+          <li>Uploading pictures with Ajax preview</li>
+          <li>Custom user avatars</li>
+          <li>Responsivness to mobile devices.</li>
+          <li>Its code is covered by specs (RSpec, capybara, factory_girl)</li>
+          <li>Utilizes popular gems like devise, haml, simple_form, paperclip, etc.</li>
+        </ul>
+      </p>
+
+      <p>
+        You can see <strong>KmGram</strong> source code on
+        <%= link_to 'https://github.com/KamilMilewski/km-gram', target: '_blank' do %>
+          GitHub <i class="fa fa-github" aria-hidden="true"></i>
+        <% end %>
+      </p>
+
+      <p>
+        Online sandbox can be found here
+        <%= link_to 'https://km-gram.herokuapp.com/', target: '_blank' do %>
+          here.
+        <% end %>
+      </p>
+
+      <%= render 'shared/blueimp_gallery', img_dir: 'IT/KM-Gram', header: 'Selected screens:' %>
+
+    </div>
+    <div class="project-margin-column"></div>
+  </div>
+</div>

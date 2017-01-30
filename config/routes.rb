@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # Projects:
   get '/km_forum', to: 'projects#km_forum'
+  get '/km_gram', to: 'projects#km_gram'
   get '/machplot', to: 'projects#machplot'
   get '/dali', to: 'projects#dali'
   get '/weather_station', to: 'projects#weather_station'
