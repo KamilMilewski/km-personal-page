@@ -3,6 +3,7 @@
 ## About
 
 It's an application written in [Ruby on Rails](http://rubyonrails.org/) and [Bootstrap](http://getbootstrap.com/).
+Nothing too fancy - mostly static pages.
 
 ## Working example
 
